@@ -1,2 +1,2 @@
 # StrataCopilot
-StrataCopilot is fully autonomus ai copilot for consulting firms which make entrie knowledge extraction and summarization process much easier 
+StrataCopilot is fully autonomus ai copilot for consulting firms which make entire knowledge extraction and summarization process much easier 
