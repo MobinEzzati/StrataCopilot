@@ -1,6 +1,21 @@
 import boto3
+from dotenv import load_dotenv
+import os
 
-client = boto3.client("bedrock-runtime", region_name="us-east-1")
+load_dotenv()
+
+AWS_REGION = os.getenv("AWS_REGION")
+MODEL_ID = os.getenv("BEDROCK_MODEL_ID")
+MAX_TOKENS = int(os.getenv("MAX_TOKENS", 500))
+TEMPERATURE = float(os.getenv("TEMPERATURE", 0.2))
+
+if not AWS_REGION:
+    raise ValueError("AWS_REGION is not set in environment variables.")
+
+if not MODEL_ID:
+    raise ValueError("BEDROCK_MODEL_ID is not set in environment variables.")
+
+client = boto3.client("bedrock-runtime", region_name=AWS_REGION)
 
 def generate_answer(question, context):
 
@@ -19,7 +34,7 @@ Answer:
 """
 
     response = client.converse(
-        modelId="us.anthropic.claude-haiku-4-5-20251001-v1:0",
+        modelId=MODEL_ID,
         messages=[
             {
                 "role": "user",
@@ -27,8 +42,8 @@ Answer:
             }
         ],
         inferenceConfig={
-            "maxTokens": 500,
-            "temperature": 0
+            "maxTokens": MAX_TOKENS,
+            "temperature": TEMPERATURE
         }
     )
 

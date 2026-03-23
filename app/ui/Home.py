@@ -1,7 +1,13 @@
 import requests
 import streamlit as st
+import os
+from dotenv import load_dotenv
 
-API_URL = "http://127.0.0.1:8001"
+load_dotenv()
+
+API_URL = os.getenv("API_URL")
+
+
 
 st.set_page_config(
     page_title="StrataCopilot",
