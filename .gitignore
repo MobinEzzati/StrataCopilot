@@ -24,3 +24,6 @@ __pycache__/
 # Uploads (optional: keep local uploads out of git)
 uploads/
 data/
+.env
+
+
