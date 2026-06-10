@@ -41,6 +41,18 @@ Answer:
                 "content": [{"text": prompt}]
             }
         ],
+        system=[
+        {
+            "text": (
+                "You are an assistant for consulting documents. "
+                "Answer questions using ONLY the provided context. "
+                "If the context doesn't contain enough information, "
+                "say 'I don't have enough information to answer this.' "
+                "Do not make up information. Cite which part of the "
+                "context supports your answer."
+            )
+        }
+    ],
         inferenceConfig={
             "maxTokens": MAX_TOKENS,
             "temperature": TEMPERATURE
