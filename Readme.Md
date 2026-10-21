@@ -2,7 +2,7 @@
 
 **StrataCopilot** is a fully autonomous AI copilot for consulting firms that makes the entire process of knowledge extraction, document summarization, and intelligent Q&A dramatically faster and easier.
 
-Upload PDFs and Word documents, ask natural language questions, and get context-aware answers powered by AWS Bedrock — all through a clean Streamlit interface.
+Upload PDFs and Word documents, ask natural language questions, and get context-aware answers powered by AWS Bedrock  all through a clean Streamlit interface.
 
 ## Architecture
 
